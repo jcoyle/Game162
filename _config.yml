@@ -1,0 +1,6 @@
+# Site settings
+title: Turbo Danger-Zone
+description: "Live, and grow turbo."
+baseurl: ""
+gems:
+  - jekyll-sitemap
