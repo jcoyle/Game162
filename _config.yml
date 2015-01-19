@@ -1,6 +1,6 @@
 # Site settings
-title: Turbo Danger-Zone
-description: "Live, and grow turbo."
+title: Game162
+description: "Hey batter batter, hey batter batter, swing!"
 baseurl: ""
 gems:
   - jekyll-sitemap
