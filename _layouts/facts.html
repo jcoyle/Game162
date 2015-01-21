@@ -1,0 +1,9 @@
+{% include getFacts.liquid %}
+
+{% include head.html %}
+	<body>
+		<h2>{{ fact[id].title }}</h2>
+		{{ content }}
+		{% include footer.html %}
+	</body>
+</html>

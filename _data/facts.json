@@ -1,0 +1,19 @@
+{
+    "facts": [
+        {
+            "id": 1,
+            "title": "Hello world!?",
+            "extra": 123,
+            "tags": [
+                "test",
+                "somewhere",
+                "not here"
+            ]
+        },
+        {
+            "id": 2,
+            "title": "This is a second title",
+            "extra": 456
+        }
+    ]
+}
