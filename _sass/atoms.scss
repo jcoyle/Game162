@@ -1,0 +1,62 @@
+/* 
+  ^font-weight
+  ^.fw
+*/
+
+.fw-med {
+  font-weight: 500;
+}
+
+/* 
+  ^font-size
+  ^.fz
+*/
+
+.fz-72 {
+	font-size: 72px;
+}
+
+.fz-36 {
+	font-size: 36px;
+}
+
+.fz-30 {
+	font-size: 30px;
+}
+
+.fz-18 {
+	font-size: 18px;
+}
+
+.fz-17 {
+	font-size: 17px;
+}
+
+.fz-16 {
+	font-size: 16px;
+}
+
+.fz-15 {
+	font-size: 15px;
+}
+
+/* 
+  ^padding
+  ^.pd
+*/
+
+.pd-v-gr1 {
+	padding-top:    $gr1;
+	padding-bottom: $gr1;
+}
+
+.pd-v-gr2 {
+	padding-top:    $gr2;
+	padding-bottom: $gr2;
+}
+
+.pd-v-gr5 {
+	padding-top:    $gr5;
+	padding-bottom: $gr5;
+}
+

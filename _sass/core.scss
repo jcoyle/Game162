@@ -1,0 +1,29 @@
+html, body {
+  background-color: #279037;
+  color:            white;
+  font-family:      'Roboto', sans-serif;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+.wrapper {
+  width: 1170px;
+  margin: 0 auto;
+}
+
+.header {
+  background-color: #1a1a1a;
+}
+
+.fact {
+  background-color: #242424;
+  &__nav {
+    background-color: #70451e;
+  }
+}
