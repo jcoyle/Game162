@@ -1,3 +1,12 @@
+/*
+	^float
+	^.fl
+*/
+
+.fl-l {
+	float: left;
+}
+
 /* 
   ^font-weight
   ^.fw
@@ -40,6 +49,28 @@
 	font-size: 15px;
 }
 
+/*
+  ^text-transform
+  ^.tt
+*/
+
+.tt-u {
+	text-transform: uppercase;
+}
+
+/*
+  ^letter-spacing
+  ^.ls
+*/
+
+.ls-sm {
+	letter-spacing: 0.025em;
+}
+
+.ls-strd {
+	letter-spacing: 0.05em;
+}
+
 /* 
   ^padding
   ^.pd
@@ -55,8 +86,33 @@
 	padding-bottom: $gr2;
 }
 
+.pd-v-gr3 {
+	padding-top:    $gr3;
+	padding-bottom: $gr3;
+}
+
+.pd-v-gr4 {
+	padding-top:    $gr4;
+	padding-bottom: $gr4;
+}
+
 .pd-v-gr5 {
 	padding-top:    $gr5;
 	padding-bottom: $gr5;
 }
 
+/*
+  ^sprite
+  .s
+*/
+
+.sprite {
+	background-image: url('/img/sprite.png');
+	background-size:  500px 400px;
+
+	&__logo {
+		background-position: -100px 0;
+		width:  78px;
+		height: 78px;		
+	}
+}
