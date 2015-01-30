@@ -3,3 +3,51 @@ $gr2 : 25px;
 $gr3 : 40px;
 $gr4 : 65px;
 $gr5 : 104px;
+
+.clearfix:before,
+.clearfix:after {
+    content: "";
+    display: table;
+} 
+.clearfix:after {
+    clear: both;
+}
+.clearfix {
+    zoom: 1; /* For IE 6/7 (trigger hasLayout) */
+}
+
+/*
+  General color: 
+*/
+
+$green       : #279037;
+$light-green : #83d890;
+$brown       : #70451e;
+$yellow      : #f2f230;
+
+/*
+  Selection
+*/
+
+@mixin selection($color, $background) {
+
+    ::-moz-selection {
+        color: $color;
+        background: $background;
+    }
+
+    ::selection {
+        color: $color;
+        background: $background;
+    }
+
+}
+
+/*
+ Transition
+*/
+
+@mixin cubic-timing() {
+  -webkit-transition-timing-function: cubic-bezier(0.535, 0.000, 0.340, 0.995);
+  transition-timing-function: cubic-bezier(0.535, 0.000, 0.340, 0.995); 
+}

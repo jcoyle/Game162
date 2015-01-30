@@ -1,5 +1,4 @@
 html, body {
-  background-color: #279037;
   color:            white;
   font-family:      'Roboto', sans-serif;
 }
@@ -18,17 +17,159 @@ a {
 }
 
 .header {
-  background-color: #1a1a1a;
+  background-color: #212121;
 }
 
 .fact {
   background-color: #242424;
   &__nav {
-    background-color: #70451e;
+    background-color: $brown;
+    @include selection(black, $yellow);
+
+    a {
+      position: relative;
+      transition: 0.3s all;
+      @include cubic-timing();
+      /*
+      &:hover {
+        background-color: rgba(0,0,0,0.2);
+      }      
+      */
+        &:hover {
+          transition: 0.3s all;
+          &:before {
+            background-color: white;
+          }
+        }
+        &:before {
+          content: '';
+          position: absolute;
+          width: 100%;
+          height: 3px;
+          background-color: transparent;
+          left: 0;
+          right: 0;
+          top: 53px;
+          margin: 0 auto;
+          transition: 0.3s all;
+        }
+    }
+
+  }
+  &__header {
+    padding-bottom: 10px;
+    border-bottom: 2px solid #3b3b3b;
+    @include selection(black, $yellow);
+    h4 {
+      padding-top: 18px;
+    }
+  }
+  &__mc {
+    h1 {
+      margin: 5 0;
+    }
+
+    @include selection(white, $green);
+
   }
 }
 
 .logo {
-  width:  260px;
-  height: 80px;
+  display: inline-block;
+  width:   260px;
+  height:  80px;
+  @include selection(white, $green);
+}
+
+.site-nav {
+  float:        right;
+  line-height:  130px;
+  margin-right: $gr2 * -1;
+  @include selection(black, $yellow);
+  li {
+    display: inline-block;
+  }
+  a {
+    display: block;
+    position: relative;
+    transition: 0.3s all;
+    @include cubic-timing();
+    &:hover {
+      color: white;
+      &:before {
+        background-color: $light-green;
+      }
+    }
+    &:before {
+      content: '';
+      position: absolute;
+      width: 55%;
+      height: 3px;
+      background-color: transparent;
+      left: 0;
+      right: 0;
+      top: 82px;
+      margin: 0 auto;
+      transition: 0.3s all;
+    }
+  }
+}
+
+.footer {
+  @include selection(white, $brown);
+  .copy {
+    margin-top: 6px;
+    color: $light-green;
+    line-height: 1.4;
+  }
+}
+
+.follow-text {
+  color:        $light-green;
+  margin-top:   22px;
+  margin-right: 10px;
+}
+
+.field {
+  background-color: $green;
+  background-image: url('/img/field.png');
+}
+
+.logo-number {
+  border-radius: 100%;
+  border: 5px solid $light-green;
+  width: 68px;
+  height: 51px;
+  padding-top: 17px;
+  float: left;
+  text-align: center;
+  letter-spacing: -0.5px;
+  margin-right: $gr1;
+  transition: 0.45s all;
+  @include cubic-timing();
+
+  &:before {
+    content: '162';
+    display: block;
+    font-size: 34px;
+  }
+
+  .logo a:hover & {
+    background-color: white;
+    border: 5px solid #999;
+    color: #242424;    
+  }
+
+  &--footer {
+    border-color: white;
+    width: 50px;
+    height: 39px;
+    padding-top: 11px;
+    text-indent: -3px;
+    &:before {
+      font-size: 28px;
+      letter-spacing: -1.5px;
+    }
+  }
+
 }
