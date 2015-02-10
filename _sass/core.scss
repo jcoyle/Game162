@@ -20,8 +20,63 @@ a {
   background-color: #212121;
 }
 
-.fact {
+.main {
   background-color: #242424;
+  &__long {
+    color: #eee;
+    font-size: 22px;
+    width: 770px;
+    margin: 0 auto;
+    @include selection(white, $green);
+    p {
+      margin-bottom: 2rem;
+      line-height: 1.8181;
+    }
+    h1 {
+      font-size: 57px;
+      font-weight: 500;
+      line-height: 1.5;
+      position: relative;
+      display: table;
+      margin: 0 auto;
+      &:after {
+        content: '';
+        width: 62.11%;
+        height: 4px;
+        background-color: $light-green;
+        display: block;
+        margin: 1rem auto 3rem;
+      }
+    }
+
+    h2 {
+      font-size: 38px;
+      font-weight: 500;
+      line-height: 1.5;
+      position: relative;
+      display: table;
+      padding-top: 0.75rem;
+      &:after {
+        content: '';
+        width: 62.11%;
+        height: 3px;
+        background-color: $light-green;
+        display: block;
+        margin: 0.25rem 0 3rem;
+      }
+    }
+
+    a {
+      color: $yellow;
+      transition: 0.4s all;
+      @include cubic-timing();
+      &:hover { color: $light-green; }
+    }
+
+  }
+}
+
+.fact {
   &__nav {
     background-color: $brown;
     @include selection(black, $yellow);
@@ -173,3 +228,20 @@ a {
   }
 
 }
+
+dl {
+  line-height: 1.5;
+}
+
+dd {
+  font-size: 20px;
+  text-indent: 1rem;
+  margin-bottom: 1rem;
+}
+
+sup {
+   vertical-align: baseline;
+   position: relative;
+   top: -0.4em;
+   font-size: 80%;
+ }
