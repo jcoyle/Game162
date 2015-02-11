@@ -5,7 +5,7 @@ layout: long
 
 # About Game162
 
-
+Game162 is a baseball site for discovering new facts in baseball. New facts are posted Monday through Friday during the baseball season (last week of March through the end of October). 
 
 ## The Name
 
