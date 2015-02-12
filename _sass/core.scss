@@ -1,3 +1,11 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
 html, body {
   color:            white;
   font-family:      'Roboto', sans-serif;
@@ -21,6 +29,7 @@ a {
 }
 
 .main {
+  @include selection(white, $green);
   background-color: #242424;
   &__long {
     color: #eee;
@@ -193,8 +202,8 @@ a {
 .logo-number {
   border-radius: 100%;
   border: 5px solid $light-green;
-  width: 68px;
-  height: 51px;
+  width: 78px;
+  height: 78px;
   padding-top: 17px;
   float: left;
   text-align: center;
@@ -217,8 +226,8 @@ a {
 
   &--footer {
     border-color: white;
-    width: 50px;
-    height: 39px;
+    width: 60px;
+    height: 60px;
     padding-top: 11px;
     text-indent: -3px;
     &:before {
@@ -245,3 +254,51 @@ sup {
    top: -0.4em;
    font-size: 80%;
  }
+
+.archive-post {
+  color: #bbb;
+  border-top: 2px solid #666;
+  width: 100%;
+  transition: 0.4s all;
+  @include cubic-timing();
+  padding-left: $gr5;
+  padding-right: $gr1;
+  &:hover { 
+    color: white;
+    border-color: $light-green;
+  }
+}
+
+.archive-heading:hover + .archive-heading {
+  .archive-post {
+    border-top-color: $light-green;
+  }
+}
+
+.archive-heading {
+  position: relative;
+  &:hover .archive-id { color: $light-green; }
+  &:last-child { 
+    .archive-post {
+      border-bottom: 2px solid #666;
+    }
+    &:hover .archive-post { border-color: $light-green; }
+  }
+}
+
+.archive-id {
+  @include cubic-timing();
+  transition:     0.4s all;
+  pointer-events: none;
+  position:       absolute;
+  top:            0;
+  bottom:         0;
+  left:           $gr1;
+  height:         15px;
+  margin:         auto;
+  color:          #777;
+}
+
+.archive-sc {
+  padding-top: 8px;
+}

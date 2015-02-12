@@ -42,12 +42,20 @@
 	font-size: 72px;
 }
 
+.fz-57 {
+	font-size: 57px;
+}
+
 .fz-36 {
 	font-size: 36px;
 }
 
 .fz-30 {
 	font-size: 30px;
+}
+
+.fz-22 {
+	font-size: 22px;
 }
 
 .fz-18 {
@@ -155,6 +163,18 @@
 
 .pd-r-gr1 {
 	padding-right: $gr1;
+}
+
+.pd-b-gr2 {
+	padding-bottom: $gr2;
+}
+
+.pd-b-gr3 {
+	padding-bottom: $gr3;
+}
+
+.pd-b-gr4 {
+	padding-bottom: $gr4;
 }
 
 .pd-r-gr2 {

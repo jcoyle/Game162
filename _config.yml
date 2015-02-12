@@ -12,3 +12,6 @@ defaults:
 
 future:    true
 permalink: /:title/
+
+paginate: 10
+paginate_path: "/archive/page/:num"
