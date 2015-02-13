@@ -19,14 +19,14 @@
 	<body class="field">
 		{% include header.html %}	
 		<section class="main">
-			<div class="wrapper pd-v-gr5">
+			<div class="wrapper main__wrapper">
 				<div class="fact fact__header clearfix">
-					<h3 class="fw-med fz-36 c-606060 fl-l">{{ factId }}</h3>
+					<h3 class="fact__id">{{ factId }}</h3>
 					<h4 class="fz-15 tt-u fz-15 c-606060 fl-r">{{ i.date | date: '%B %d, %Y' }}</h4>
 				</div>
 				<div class="fact fact__mc">
-					<h1 class="fw-med fz-72 pd-v-gr2 lh-sm" >{{ primary }}</h1>
-					<h2 class="fz-30 lh-strd">{{ i.secondary }}</h2>
+					<h1 class="fact__primary" >{{ primary }}</h1>
+					<h2 class="fact__secondary">{{ i.secondary }}</h2>
 				</div>
 			</div>
 			<div class="fact fact__nav">
@@ -34,13 +34,13 @@
 					{% if i.previous %} 
 						<a href="{{ i.previous.url }}" class="pd-v-gr2 fz-18 tt-u fl-l ls-strd animated fadeInUp">
 							<span class="sprite sprite__prev fl-l"></span>
-							Previous Fact
+							Previous <span class="hide-sm">Fact</span>
 						</a>
 					{% endif %}
 					{% if i.next %} 
 						<a href="{{ i.next.url }}" class="pd-v-gr2 fz-18 tt-u fl-r ls-strd animated fadeInUp">
 							<span class="sprite sprite__next fl-r"></span>
-							Next Fact
+							Next <span class="hide-sm">Fact</span>
 						</a>
 					{% endif %}
 				</div>

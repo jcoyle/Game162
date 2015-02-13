@@ -24,6 +24,7 @@ a {
   margin: 0 auto;
 }
 
+
 .header {
   background-color: #212121;
 }
@@ -31,6 +32,9 @@ a {
 .main {
   @include selection(white, $green);
   background-color: #242424;
+  &__wrapper {
+    padding: $gr5 0;
+  }
   &__long {
     color: #eee;
     font-size: 22px;
@@ -136,6 +140,25 @@ a {
     @include selection(white, $green);
 
   }
+  &__id {
+    font-size: 500;
+    font-size: 36px;
+    color: #606060;
+    float: left;
+  }
+
+  &__primary {
+    font-weight: 500;
+    font-size: 72px;
+    padding: $gr2 0;
+    line-height: 1.2;
+  }
+
+  &__secondary {
+    font-size: 30px;
+    line-height: 1.5;
+  }
+
 }
 
 .logo {
@@ -176,6 +199,9 @@ a {
       margin: 0 auto;
       transition: 0.3s all;
     }
+  }
+  &__link {
+    padding: 0 $gr2;
   }
 }
 
