@@ -1,0 +1,57 @@
+/**
+ * Layout: .long
+ *
+ * Long exists as a basic blog style. Complex styling
+ *   rules are not necessary for now.
+ *
+ * 1. Green Line below a header.
+**/
+
+.long {
+  @include selection(white, $green);
+  color: #eee;
+  font-size: 22px;
+  margin: 0 auto;
+  width: 770px;
+  a {
+    @include standard-transition();
+    color: $yellow;
+    &:hover { color: $light-green; }
+  }
+  h1 {
+    display: table;
+    font-size: 57px;
+    font-weight: 500;
+    line-height: 1.5;
+    margin: 0 auto;
+    position: relative;
+    &:after { /* 1 */
+      content: '';
+      width: 62.11%;
+      height: 4px;
+      background-color: $light-green;
+      display: block;
+      margin: 1rem auto 3rem;
+    }
+  }
+  h2 {
+    display: table;
+    font-size: 38px;
+    font-weight: 500;
+    line-height: $lh-strd;
+    padding-top: 0.75rem;
+    position: relative;
+    &:after { /* 1 */
+      background-color: $light-green;
+      content: '';
+      display: block;
+      height: 3px;
+      margin: 0.25rem 0 3rem;
+      width: 62.11%;
+    }
+  }
+  p {
+    line-height: $lh-lg;
+    margin-bottom: 2rem;
+  }
+}

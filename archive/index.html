@@ -6,7 +6,7 @@ layout: archive
 <div class="wrapper pd-v-gr5">
 	<div class="main main__archive">
 		<h1 class="fz-36 fw-med">Archive</h1>
-		<p class="archive-sc fz-18 pd-b-gr4 c-939393 lh-strd">Clicking on a fact can give you more information related to the fact along with the date it was posted.</p>
+		<p class="archive-sc">Clicking on a fact can give you more information related to the fact along with the date it was posted.</p>
 
 		{% for post in paginator.posts %}
 		  <h3 class="archive-heading">
@@ -17,21 +17,21 @@ layout: archive
 	</div>
 </div>
 
-<div class="fact fact__nav">
+<div class="main-nav">
 	<div class="wrapper clearfix">
 		<!-- Pagination links -->
 		{% if paginator.total_pages > 1 %}
 		<div class="pagination">
 
 		  {% if paginator.previous_page %}
-			<a rel="prev" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="pd-v-gr2 fz-18 tt-u fl-l ls-strd animated fadeInUp">
+			<a rel="prev" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="main-nav-btn fl-l animated fadeInUp">
 				<span class="sprite sprite__prev fl-l"></span>
 				Previous Page
 			</a>
 		  {% endif %}
 
 		  {% if paginator.next_page %}
-			<a rel="next" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="pd-v-gr2 fz-18 tt-u fl-r ls-strd animated fadeInUp">
+			<a rel="next" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="main-nav-btn fl-r animated fadeInUp">
 				<span class="sprite sprite__next fl-r"></span>
 				Next Page
 			</a>

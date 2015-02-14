@@ -1,0 +1,55 @@
+/**
+ * Layout: .fact
+ *
+ * Fact is for an individual fact posting.
+ *
+ * 1. Intentionally blank.
+**/
+
+.fact { } /* 1 */
+
+  .fact-wrapper {
+    padding: $gr3 $gr1;
+    @media #{$md-to-lg-screen} { padding: $gr4 $gr2; }
+    @media #{$lg-screen} { padding: $gr5 0; }
+  }
+
+  .fact-header {
+    @include selection(black, $yellow);
+    border-bottom: 2px solid #3b3b3b;
+    padding-bottom: 10px;
+  }
+
+  .fact-date { 
+    color: #5e5e5e;
+    padding-top: 8px;
+    text-transform: uppercase;
+    @media #{$md-screen} { padding-top: 18px; }
+  }
+
+  .fact-id {
+    color: #606060;
+    font-size: 24px;
+    font-weight: 500;
+    @media #{$md-to-lg-screen} { font-size: 32px; }
+    @media #{$lg-screen} { font-size: 36px; }
+  }
+
+  .fact-primary {
+    font-size: 27px;
+    font-weight: 500;
+    line-height: $lh-sm;
+    padding: $gr1 0;
+    @media #{$md-to-lg-screen} { font-size: 36px; }
+    @media #{$lg-screen} {
+      font-size: 72px;
+      padding: $gr2 0;
+    }
+  }
+
+  .fact-secondary {
+    font-size: 17px;
+    line-height: $lh-strd;
+    @media #{$md-to-lg-screen} { font-size: 22px; }
+    @media #{$lg-screen} { font-size: 30px; }
+  }

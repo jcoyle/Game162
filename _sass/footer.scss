@@ -1,0 +1,19 @@
+.field {
+  background-color: $green;
+  background-image: url('/img/field.png');
+}
+
+.follow-text {
+  color: $light-green;
+  margin-right: 10px;
+  margin-top: 22px;
+}
+
+.footer {
+  @include selection(white, $brown);
+  .copy {
+    color: $light-green;
+    line-height: 1.4;
+    margin-top: 6px;
+  }
+}

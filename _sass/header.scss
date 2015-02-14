@@ -1,0 +1,56 @@
+/**
+ * Block: .header
+ *
+ * 1. Hover styling specific to linkable header logo.
+**/
+
+.header {
+  @include selection(black, $yellow);
+  background-color: #212121;
+}
+
+  .header-logo-wrapper {
+    display: inline-block;
+    height: 80px;
+    width: 260px;
+    a:hover .logo-number { /* 1 */
+      background-color: white;
+      border: 5px solid #999;
+      color: #242424; 
+    }
+  }
+
+
+/**
+ * Block: .site-nav
+**/
+
+.site-nav {
+  float: right;
+  line-height: 130px;
+  margin-right: $gr2 * -1;
+  li { display: inline-block; }
+}
+
+  .site-nav-link {
+    @include standard-transition();
+    display: block;
+    padding: 0 $gr2;
+    position: relative;
+    &:before {
+      @include standard-transition();
+      background-color: transparent;
+      content: '';
+      height: 3px;
+      left: 0;
+      margin: 0 auto;
+      right: 0;
+      top: 82px;
+      position: absolute;
+      width: 55%;
+    }
+    &:hover {
+      color: white;
+      &:before { background-color: $light-green; }
+    }
+  }

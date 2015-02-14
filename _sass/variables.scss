@@ -4,18 +4,6 @@ $gr3 : 40px;
 $gr4 : 65px;
 $gr5 : 104px;
 
-.clearfix:before,
-.clearfix:after {
-    content: "";
-    display: table;
-} 
-.clearfix:after {
-    clear: both;
-}
-.clearfix {
-    zoom: 1; /* For IE 6/7 (trigger hasLayout) */
-}
-
 /*
   General color: 
 */
@@ -44,6 +32,20 @@ $yellow      : #f2f230;
 }
 
 /*
+ Letter-spacing
+*/
+
+$ls-strd: 0.04em;
+
+/*
+ Line-height
+*/
+
+$lh-sm: 1.2;
+$lh-strd: 1.5;
+$lh-lg: 1.8181;
+
+/*
  Transition
 */
 
@@ -51,3 +53,18 @@ $yellow      : #f2f230;
   -webkit-transition-timing-function: cubic-bezier(0.535, 0.000, 0.340, 0.995);
   transition-timing-function: cubic-bezier(0.535, 0.000, 0.340, 0.995); 
 }
+
+@mixin standard-transition() {
+  transition: 0.4s all;
+  @include cubic-timing();
+}
+
+/*
+ Media Queries
+*/
+
+$sm-screen: "(max-width: 479px)";
+$md-screen: "(min-width: 480px)";
+$lg-screen: "(min-width: 1170px)";
+
+$md-to-lg-screen: "(min-width: 480px) and (max-width: 1169px)";

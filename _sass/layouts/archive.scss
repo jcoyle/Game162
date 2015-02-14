@@ -1,0 +1,60 @@
+/**
+ * Layout: .archive
+ *
+ * List of fact-based posts.
+ *
+ * 1. Intentionally blank.
+ * 2. Bottom border applied to last element since there is
+ *    no 'top' border from another sibling.
+ * 3. Hover effect for last-sibling bottom-border.
+ * 4. Hover effect to get the 'bottom' border to light
+ *    up when over an individual post. The 'bottom' border 
+ *    is really the 'top' border of the next sibling.  
+**/
+
+.archive { } /* 1 */
+
+  .archive-heading {
+    position: relative;
+    &:hover .archive-id { color: $light-green; }
+    &:last-child { 
+      .archive-post { border-bottom: 2px solid #666; } /* 2 */
+      &:hover .archive-post { border-color: $light-green; } /* 3 */
+    }
+  }
+
+  .archive-heading:hover + 
+  .archive-heading .archive-post { border-top-color: $light-green; } /* 4 */
+
+  .archive-id {
+    @include standard-transition();
+    bottom: 0;
+    color: #777;
+    height: 15px;
+    left: $gr1;
+    margin: auto;
+    pointer-events: none;
+    position: absolute;
+    top: 0;
+  }
+
+  .archive-post {
+    @include standard-transition();
+    border-top: 2px solid #666;
+    color: #bbb;
+    padding-left: $gr5;
+    padding-right: $gr1;
+    width: 100%;
+    &:hover { 
+      border-color: $light-green;
+      color: white;
+    }
+  }
+  
+  .archive-sc {
+    color: #939393;
+    font-size: 18px;
+    line-height: $lh-strd;
+    padding-bottom: $gr4;
+    padding-top: 8px;
+  }

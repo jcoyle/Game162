@@ -1,330 +1,137 @@
-html {
-  box-sizing: border-box;
-}
-*, *:before, *:after {
-  box-sizing: inherit;
-}
+/**
+ * Global Box-sizing
+**/
 
+html { box-sizing: border-box; }
+*, *:before, *:after { box-sizing: inherit; }
+
+
+/**
+ * Global Elements
+**/
 
 html, body {
-  color:            white;
-  font-family:      'Roboto', sans-serif;
+  color: white;
+  font-family: 'Roboto', sans-serif; /* Available in 400 or 500 font-weight only */
 }
 
 a {
   color: white;
   text-decoration: none;
-  &:hover {
-    text-decoration: none;
+  &:hover { text-decoration: none; }
+}
+
+dd {
+  font-size: 20px;
+  margin-bottom: 1rem;
+  text-indent: 1rem;
+}
+
+dl {
+  line-height: $lh-strd;
+}
+
+sup {
+  font-size: 80%;
+  position: relative;
+  top: -0.4em;
+  vertical-align: baseline;
+}
+
+
+/**
+ * Global Layout Styles
+**/
+
+.wrapper {
+  margin: 0 auto;
+  padding: 0 $gr1;
+  width: 100%;
+  @media #{$md-to-lg-screen} { padding: 0 $gr2; }    
+  @media #{$lg-screen} {
+    width: 1170px;
+    padding: 0;
   }
 }
 
-.wrapper {
-  width: 1170px;
-  margin: 0 auto;
-}
 
-
-.header {
-  background-color: #212121;
-}
+/**
+ * Block: .main
+ *   The primary dark background styling found
+ *     between the site header and secondary content,
+ *     visually divided by background color differences.
+**/
 
 .main {
   @include selection(white, $green);
   background-color: #242424;
-  &__wrapper {
-    padding: $gr5 0;
-  }
-  &__long {
-    color: #eee;
-    font-size: 22px;
-    width: 770px;
-    margin: 0 auto;
-    @include selection(white, $green);
-    p {
-      margin-bottom: 2rem;
-      line-height: 1.8181;
-    }
-    h1 {
-      font-size: 57px;
-      font-weight: 500;
-      line-height: 1.5;
-      position: relative;
-      display: table;
-      margin: 0 auto;
-      &:after {
-        content: '';
-        width: 62.11%;
-        height: 4px;
-        background-color: $light-green;
-        display: block;
-        margin: 1rem auto 3rem;
-      }
-    }
-
-    h2 {
-      font-size: 38px;
-      font-weight: 500;
-      line-height: 1.5;
-      position: relative;
-      display: table;
-      padding-top: 0.75rem;
-      &:after {
-        content: '';
-        width: 62.11%;
-        height: 3px;
-        background-color: $light-green;
-        display: block;
-        margin: 0.25rem 0 3rem;
-      }
-    }
-
-    a {
-      color: $yellow;
-      transition: 0.4s all;
-      @include cubic-timing();
-      &:hover { color: $light-green; }
-    }
-
-  }
 }
 
-.fact {
-  &__nav {
+  /**
+   * Element: .main-nav
+   *   A simple navigator below the main content that goes
+   *     within similar pages. E.g. previous/next fact, page.
+  **/
+
+  .main-nav {
+    @include selection(black, $yellow);
     background-color: $brown;
-    @include selection(black, $yellow);
+  }
 
-    a {
+    .main-nav-btn {
+      @include standard-transition();
+      font-size: 18px;
+      letter-spacing: $ls-strd;
+      padding-bottom: $gr2;
+      padding-top: $gr2;
       position: relative;
-      transition: 0.3s all;
-      @include cubic-timing();
-      /*
-      &:hover {
-        background-color: rgba(0,0,0,0.2);
-      }      
-      */
-        &:hover {
-          transition: 0.3s all;
-          &:before {
-            background-color: white;
-          }
-        }
-        &:before {
-          content: '';
-          position: absolute;
-          width: 100%;
-          height: 3px;
-          background-color: transparent;
-          left: 0;
-          right: 0;
-          top: 53px;
-          margin: 0 auto;
-          transition: 0.3s all;
-        }
-    }
-
-  }
-  &__header {
-    padding-bottom: 10px;
-    border-bottom: 2px solid #3b3b3b;
-    @include selection(black, $yellow);
-    h4 {
-      padding-top: 18px;
-    }
-  }
-  &__mc {
-    h1 {
-      margin: 5 0;
-    }
-
-    @include selection(white, $green);
-
-  }
-  &__id {
-    font-size: 500;
-    font-size: 36px;
-    color: #606060;
-    float: left;
-  }
-
-  &__primary {
-    font-weight: 500;
-    font-size: 72px;
-    padding: $gr2 0;
-    line-height: 1.2;
-  }
-
-  &__secondary {
-    font-size: 30px;
-    line-height: 1.5;
-  }
-
-}
-
-.logo {
-  display: inline-block;
-  width:   260px;
-  height:  80px;
-  @include selection(white, $green);
-}
-
-.site-nav {
-  float:        right;
-  line-height:  130px;
-  margin-right: $gr2 * -1;
-  @include selection(black, $yellow);
-  li {
-    display: inline-block;
-  }
-  a {
-    display: block;
-    position: relative;
-    transition: 0.3s all;
-    @include cubic-timing();
-    &:hover {
-      color: white;
+      text-transform: uppercase;
+      &:hover:before { background-color: white; }
       &:before {
-        background-color: $light-green;
+        background-color: transparent;
+        content: '';
+        height: 3px;
+        left: 0;
+        margin: 0 auto;
+        position: absolute;
+        right: 0;
+        top: 53px;
+        transition: 0.3s all;
+        width: 100%;
       }
     }
-    &:before {
-      content: '';
-      position: absolute;
-      width: 55%;
-      height: 3px;
-      background-color: transparent;
-      left: 0;
-      right: 0;
-      top: 82px;
-      margin: 0 auto;
-      transition: 0.3s all;
-    }
-  }
-  &__link {
-    padding: 0 $gr2;
-  }
-}
 
-.footer {
-  @include selection(white, $brown);
-  .copy {
-    margin-top: 6px;
-    color: $light-green;
-    line-height: 1.4;
-  }
-}
 
-.follow-text {
-  color:        $light-green;
-  margin-top:   22px;
-  margin-right: 10px;
-}
-
-.field {
-  background-color: $green;
-  background-image: url('/img/field.png');
-}
+/**
+ * Block: .logo-number
+**/
 
 .logo-number {
-  border-radius: 100%;
+  @include standard-transition();
   border: 5px solid $light-green;
-  width: 78px;
+  border-radius: 100%;
+  font-weight: 500;
   height: 78px;
-  padding-top: 17px;
-  float: left;
-  text-align: center;
   letter-spacing: -0.5px;
   margin-right: $gr1;
-  transition: 0.45s all;
-  @include cubic-timing();
-
+  padding-top: 17px;
+  text-align: center;
+  width: 78px;
   &:before {
     content: '162';
     display: block;
     font-size: 34px;
   }
+}
 
-  .logo a:hover & {
-    background-color: white;
-    border: 5px solid #999;
-    color: #242424;    
-  }
-
-  &--footer {
+  .logo-number-footer {
     border-color: white;
-    width: 60px;
     height: 60px;
     padding-top: 11px;
     text-indent: -3px;
+    width: 60px;
     &:before {
       font-size: 28px;
       letter-spacing: -1.5px;
     }
   }
-
-}
-
-dl {
-  line-height: 1.5;
-}
-
-dd {
-  font-size: 20px;
-  text-indent: 1rem;
-  margin-bottom: 1rem;
-}
-
-sup {
-   vertical-align: baseline;
-   position: relative;
-   top: -0.4em;
-   font-size: 80%;
- }
-
-.archive-post {
-  color: #bbb;
-  border-top: 2px solid #666;
-  width: 100%;
-  transition: 0.4s all;
-  @include cubic-timing();
-  padding-left: $gr5;
-  padding-right: $gr1;
-  &:hover { 
-    color: white;
-    border-color: $light-green;
-  }
-}
-
-.archive-heading:hover + .archive-heading {
-  .archive-post {
-    border-top-color: $light-green;
-  }
-}
-
-.archive-heading {
-  position: relative;
-  &:hover .archive-id { color: $light-green; }
-  &:last-child { 
-    .archive-post {
-      border-bottom: 2px solid #666;
-    }
-    &:hover .archive-post { border-color: $light-green; }
-  }
-}
-
-.archive-id {
-  @include cubic-timing();
-  transition:     0.4s all;
-  pointer-events: none;
-  position:       absolute;
-  top:            0;
-  bottom:         0;
-  left:           $gr1;
-  height:         15px;
-  margin:         auto;
-  color:          #777;
-}
-
-.archive-sc {
-  padding-top: 8px;
-}
