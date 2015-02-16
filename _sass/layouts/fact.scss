@@ -8,12 +8,6 @@
 
 .fact { } /* 1 */
 
-  .fact-wrapper {
-    padding: $gr3 $gr1;
-    @media #{$md-to-lg-screen} { padding: $gr4 $gr2; }
-    @media #{$lg-screen} { padding: $gr5 0; }
-  }
-
   .fact-header {
     @include selection(black, $yellow);
     border-bottom: 2px solid #3b3b3b;

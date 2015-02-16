@@ -202,97 +202,61 @@
   padding-top: $gr1;
 }
 
-/*
-  ^margin
-  ^.m
-*/
+/**
+ * Position
+**/
 
-.m-r-gr1 {
-  margin-right: $gr1;
-}
+.po-r { position: relative; }
 
-.m-r-gr2 {
-  margin-right: $gr2;
-}
 
-/*
-  ^sprite
-  .s
-*/
+/**
+ * Margins
+**/
 
-.sprite {
-  background-image:  url('/img/sprite.png');
-  background-size:   500px 400px;
+.m-r-gr1 { margin-right: $gr1; }
+.m-r-gr2 { margin-right: $gr2; }
+
+
+/**
+ * Sprite: .i
+**/
+
+.i {
+  background-image: url('/img/sprite.png');
   background-repeat: no-repeat;
-
-  &__logo {
-    background-position: -100px 0;
-    width:  78px;
-    height: 78px;
-    position: absolute;
-    &--hover {
-      position: relative;
-      z-index: 1;
-      width: 78px;
-      height: 78px;
-    }
-    &:before {
-      content: '';
-      position: absolute;
-      z-index: -1;
-      border-radius: 100%;
-      background-color: $green;
-      width: 78px;
-      height: 78px;
-      transition: 0.3s all;
-      transform: scale(0);
-    }
-  }
-
-  &__logo-footer {
-    background-position: 0 -100px;
-    width:  65px;
-    height: 65px;
-  }
-
-  &__prev {
-    width: 8px;
-    height: 14px;
-    margin-top: 2px;
-    margin-right: 10px;
-  }
-
-  &__next {
-    background-position: -50px 0;
-    width:               8px;
-    height:              14px;
-    margin-top:          2px;
-    margin-left:         10px;
-  }
-
-  &__github {
-    margin-top:          10px;
-    margin-left:         5px;
-    background-position: -293px 0;
-    width:               39px;
-    height:              39px;
-    &:hover {
-      background-position: -293px -50px; 
-    }
-  }
-
-  &__rss {
-    margin-top:          10px;
-    margin-left:         5px;
-    background-position: -293px -100px;
-    width:               39px;
-    height:              39px;
-    &:hover {
-      background-position: -293px -150px; 
-    }
-  }
-
+  background-size: 500px 400px;
 }
+
+  .i-rss {
+    background-position: -293px -100px;
+    height: 39px;
+    position: absolute;
+    width: 39px;
+    right: $gr2;
+    top: $gr2;
+    &:hover { background-position: -293px -150px; }
+    @media #{$mq-footer} { 
+      margin-left: 5px;
+      margin-top: 10px;
+      position: static; 
+    }
+  }
+
+  .i-prev {
+    height: 14px;
+    margin-right: 10px;
+    margin-top: 2px;
+    width: 8px;
+  }
+
+  .i-next {
+    background-position: -50px 0;
+    height: 14px;
+    margin-left: 10px;
+    margin-top: 2px;
+    width: 8px;
+  }
+
 
 /*
   ^color

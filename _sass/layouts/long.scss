@@ -10,9 +10,13 @@
 .long {
   @include selection(white, $green);
   color: #eee;
-  font-size: 22px;
+  font-size: 18px;
   margin: 0 auto;
-  width: 770px;
+  width: 100%;
+  @media (min-width: 800px) { 
+    font-size: 22px;
+    width: 770px; 
+  }
   a {
     @include standard-transition();
     color: $yellow;
@@ -20,11 +24,15 @@
   }
   h1 {
     display: table;
-    font-size: 57px;
+    font-size: 48px;
     font-weight: 500;
-    line-height: 1.5;
+    line-height: $lh-sm;
     margin: 0 auto;
     position: relative;
+    @media (min-width: 800px) { 
+      font-size: 57px;
+      line-height: $lh-strd;
+    }
     &:after { /* 1 */
       content: '';
       width: 62.11%;
@@ -36,11 +44,15 @@
   }
   h2 {
     display: table;
-    font-size: 38px;
+    font-size: 34px;
     font-weight: 500;
     line-height: $lh-strd;
-    padding-top: 0.75rem;
+    padding-top: 0.5rem;
     position: relative;
+    @media (min-width: 800px) { 
+      font-size: 38px;
+      padding-top: 0.75rem; 
+    }
     &:after { /* 1 */
       background-color: $light-green;
       content: '';
@@ -52,6 +64,7 @@
   }
   p {
     line-height: $lh-lg;
-    margin-bottom: 2rem;
+    margin-bottom: 1.5rem;
+    @media (min-width: 800px) { margin-bottom: 2rem; }
   }
 }

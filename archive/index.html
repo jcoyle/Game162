@@ -3,15 +3,15 @@ title: Archive - Game162
 layout: archive
 ---
 
-<div class="wrapper pd-v-gr5">
+<div class="wrapper main-wrapper">
 	<div class="main main__archive">
 		<h1 class="fz-36 fw-med">Archive</h1>
 		<p class="archive-sc">Clicking on a fact can give you more information related to the fact along with the date it was posted.</p>
 
 		{% for post in paginator.posts %}
 		  <h3 class="archive-heading">
-		  	<a class="fz-30 pd-v-gr3 d-ib lh-sm archive-post" href="{{ post.url }}">{{ post.title }}</a>
-		  	<span class="archive-id">{{ post.id | remove:'/' | prepend:'#'}}</span>
+		  	<a class="archive-post" href="{{ post.url }}">{{ post.title }}</a>
+		  	<span class="archive-id hide-sm">{{ post.id | remove:'/' | prepend:'#'}}</span>
 		  </h1>
 		{% endfor %}
 	</div>
@@ -25,15 +25,15 @@ layout: archive
 
 		  {% if paginator.previous_page %}
 			<a rel="prev" href="{{ paginator.previous_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="main-nav-btn fl-l animated fadeInUp">
-				<span class="sprite sprite__prev fl-l"></span>
-				Previous Page
+				<span class="i i-prev fl-l"></span>
+				Previous <span class="hide-sm">Page</span>
 			</a>
 		  {% endif %}
 
 		  {% if paginator.next_page %}
 			<a rel="next" href="{{ paginator.next_page_path | prepend: site.baseurl | replace: '//', '/' }}" class="main-nav-btn fl-r animated fadeInUp">
-				<span class="sprite sprite__next fl-r"></span>
-				Next Page
+				<span class="i i-next fl-r"></span>
+				Next <span class="hide-sm">Page</span>
 			</a>
 		  {% endif %}
 		</div>

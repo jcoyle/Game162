@@ -42,9 +42,19 @@
     @include standard-transition();
     border-top: 2px solid #666;
     color: #bbb;
-    padding-left: $gr5;
-    padding-right: $gr1;
+    display: inline-block;
+    font-size: 18px;
+    line-height: $lh-sm;
+    padding: $gr2 $gr1 $gr2 $gr1;
     width: 100%;
+    @media #{$md-to-lg-screen} { 
+      font-size: 24px; 
+      padding-left: $gr5;
+    }
+    @media #{$lg-screen} {
+      font-size: 30px;
+      padding: $gr3 $gr1 $gr3 $gr5;
+    }
     &:hover { 
       border-color: $light-green;
       color: white;
@@ -55,6 +65,8 @@
     color: #939393;
     font-size: 18px;
     line-height: $lh-strd;
-    padding-bottom: $gr4;
+    padding-bottom: $gr2;
     padding-top: 8px;
+    @media #{$md-to-lg-screen} { padding-bottom: $gr3; }
+    @media #{$lg-screen} { padding-bottom: $gr4; }
   }

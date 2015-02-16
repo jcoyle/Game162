@@ -18,7 +18,7 @@
 	<body class="field">
 		{% include header.html %}	
 		<section class="main">
-			<div class="wrapper fact-wrapper">
+			<div class="wrapper main-wrapper">
 				<div class="fact fact-header clearfix">
 					<h3 class="fact-id fl-l">{{ factId }}</h3>
 					<h4 class="fact-date fl-r">{{ i.date | date: '%B %d, %Y' }}</h4>
@@ -32,13 +32,13 @@
 				<div class="wrapper clearfix">
 					{% if i.previous %} 
 						<a href="{{ i.previous.url }}" class="main-nav-btn fl-l animated fadeInUp">
-							<span class="sprite sprite__prev fl-l"></span>
+							<span class="i i-prev fl-l"></span>
 							Previous <span class="hide-sm">Fact</span>
 						</a>
 					{% endif %}
 					{% if i.next %} 
 						<a href="{{ i.next.url }}" class="main-nav-btn fl-r animated fadeInUp">
-							<span class="sprite sprite__next fl-r"></span>
+							<span class="i i-next fl-r"></span>
 							Next <span class="hide-sm">Fact</span>
 						</a>
 					{% endif %}

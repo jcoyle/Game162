@@ -59,12 +59,22 @@ $lh-lg: 1.8181;
   @include cubic-timing();
 }
 
-/*
- Media Queries
-*/
+/**
+ * General Media Queries
+**/
 
 $sm-screen: "(max-width: 479px)";
 $md-screen: "(min-width: 480px)";
 $lg-screen: "(min-width: 1170px)";
 
 $md-to-lg-screen: "(min-width: 480px) and (max-width: 1169px)";
+
+/**
+ * Responsive Media Query IDs
+ *
+ * Media queries that are specific to a certain area.
+ *  Refactor variable names if complexity increases.
+**/
+
+$mq-header: "(min-width: 535px)";
+$mq-footer: "(min-width: 595px)";
