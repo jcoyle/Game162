@@ -12,7 +12,8 @@
   .header-logo-wrapper {
     display: inline-block;
     height: 80px;
-    width: 260px;
+    width: 80px;
+    @media #{$md-screen} { width: 260px; }
     a:hover .logo-number { /* 1 */
       background-color: white;
       border: 5px solid #999;
@@ -35,8 +36,9 @@
   .site-nav-link {
     @include standard-transition();
     display: block;
-    padding: 0 $gr2;
+    padding: 0 $gr1;
     position: relative;
+    @media #{$lg-screen} { padding: 0 $gr2; }
     &:before {
       @include standard-transition();
       background-color: transparent;
@@ -53,4 +55,5 @@
       color: white;
       &:before { background-color: $light-green; }
     }
+    &:last-child { padding-right: $gr2; }
   }
