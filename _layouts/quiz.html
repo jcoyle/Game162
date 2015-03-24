@@ -1,0 +1,29 @@
+{% assign quiz = site.data.record-holders-quiz %}
+
+
+{% include head.html %}
+	<body class="field">
+		{% include header.html %}	
+		<section class="main">
+			<div class="wrapper main-wrapper">	
+				{{ content }}
+				<div class="js-questions">
+					{% for q in quiz.question %}
+						<ul class="clearfix question js-question">
+							<span class='question-number js-question-number'>{{ forloop.index }}</span>
+							<h2 class="js-question-name question-name">{{ q.question }}</h2>
+							{% for choice in q.choices %}
+								<li>
+									<button class="js-letter ar">{{ choice }}</button>
+								</li>
+							{% endfor %}
+						</ul>
+					{% endfor %}
+				</div>
+			</div>
+		</section>
+		{% include footer.html %}
+		{% include foot.html %}
+		<script src="/js/quiz.js"></script>
+	</body>
+</html>

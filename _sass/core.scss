@@ -10,10 +10,9 @@ html { box-sizing: border-box; }
  * Global Elements
 **/
 
-html, body {
-  color: white;
-  font-family: 'Roboto', sans-serif; /* Available in 400 or 500 font-weight only */
-}
+html, body { color: white; }
+
+html, body, .ar { font-family: 'Roboto', sans-serif; /* Available in 400 or 500 font-weight only */ }
 
 a {
   color: white;
@@ -156,3 +155,41 @@ sup {
       &:before { font-size: 28px; }
     }
   }
+
+.ar {
+  @include standard-transition();
+  cursor: pointer;
+  background-color: #313131;
+  border: none;
+  border-radius: 2px;
+  color: #fff;
+  display: inline-block;
+  font-size: 16px;
+  font-weight: 500;
+  padding: $gr1 $gr2;      
+  width: 100%;
+  &:hover { background-color: $brown; color: white; }
+  span { float: left; }
+}
+
+
+
+.question li {
+  float: left;
+  margin: 0 auto; 
+  padding: $gr1;
+  text-align: center;
+  width: 50%;
+  &:last-child { width: 100%; 
+    .ar { 
+      width: 50%; 
+    } 
+  }
+}
+
+.question-name {
+  font-size: 57px;
+  font-weight: 500;
+  line-height: 1.2;
+  margin: $gr3 auto $gr2;
+}
