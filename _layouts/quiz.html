@@ -5,12 +5,15 @@
 	<body class="field">
 		{% include header.html %}	
 		<section class="main">
-			<div class="wrapper main-wrapper">	
+			<div id="questions" class="wrapper main-wrapper">	
 				{{ content }}
 				<div class="js-questions">
 					{% for q in quiz.question %}
-						<ul class="clearfix question js-question">
-							<span class='question-number js-question-number'>{{ forloop.index }}</span>
+						<ul class="clearfix button-display question js-question">
+							<div class="fact fact-header clearfix">
+								<h4 class='question-number fl-l'>Question <span class='js-question-number'>{{ forloop.index }}</span> of {{ forloop.length }}</h4>
+								<h5 class='question-score fl-r'>You are <span class='js-q-correct'>0</span> for <span class='js-q-total'>0</span></h4>
+							</div>
 							<h2 class="js-question-name question-name">{{ q.question }}</h2>
 							{% for choice in q.choices %}
 								<li>
@@ -20,7 +23,36 @@
 						</ul>
 					{% endfor %}
 				</div>
+
+				<div class='quick-answer-display js-quick-answer-display'>
+					<h3 class='answer-result js-wrong'>The correct answer is: <span></span></h3>
+					<h3 class='answer-result js-right'>Well done!</h3>
+				</div>
+
+				<div class="question-divider"></div>
+				<button class="question-nav animated fadeInUp fl-l js-question-nav js-prev is-disabled">
+					<span class="i i-prev fl-l"></span>
+					Previous Question
+				</button>
+				<button class="question-nav animated fadeInUp fl-r js-question-nav js-next is-disabled">
+					<span class="i i-next fl-r"></span>
+					Next Question
+				</button>
 			</div>
+
+			<div id="results" class="results wrapper main-wrapper is-hidden">
+				<h5 class='results-score'>You went <span class='results-correct js-q-correct'>0</span> for <span class='results-total js-q-total'>0</span> (<span class='js-q-ba'>0.000</span>)</h4>
+			  <ul class="clearfix button-display">
+			  	<li>
+					  <a href='#' class='ar'>Take the Leaders Quiz Again</a>
+					</li>
+					<li>
+					  <a href='#' class='ar'>Return to main quiz page</a>
+					</li>
+					<li></li>
+				</ul>
+			</div>
+
 		</section>
 		{% include footer.html %}
 		{% include foot.html %}

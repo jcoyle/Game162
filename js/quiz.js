@@ -1,11 +1,17 @@
+var questionNumber  = 1
+  , questionCount   = $('.js-question').length
+  , questionCorrect = 0
+  , questionTotal   = 0
+  ;
+
 $(function() {
 
-  var questionSet  = []
-    , choices      = []
-    , choiceSet    = []
-    , answer       = []
-    , questionName = []
-    , questionList = $('.js-question')
+  var questionSet    = []
+    , choices        = []
+    , choiceSet      = []
+    , answer         = []
+    , questionName   = []
+    , questionList   = $('.js-question')
     , i = 0
     ;
 
@@ -29,7 +35,7 @@ $(function() {
   });
 
   questionList = printQuestions(questionList);
-
+  displayQuestion(1);
 
 });
 
@@ -79,7 +85,88 @@ function printQuestions(array) {
   for (var i = 0; i < array.length; i++) {
     questions = questions.append(array[i]);
     $('.js-question:last-child .js-question-number').text(i+1);
+    $('.js-question:last-child').addClass('js-q-'+(i+1));
   }
+
+  $('.js-q-' + array.length).addClass('js-last-question');
 
   return array;
 }
+
+
+function displayQuestion(number) {
+  number = $('.js-q-'+number);
+  $('.js-question').removeClass('is-visible');
+  number.addClass('is-visible');
+  if (!(number.hasClass('js-question-answered'))) { hideNextButton(); }
+}
+
+function correctAnswer(choice) {
+  questionCorrect++;
+  questionTotal++;
+  updateUserScore(questionCorrect, questionTotal);
+  choice.addClass('highlight-right');
+  choice.parents('.js-question').addClass('js-question-answered');
+  $('.js-right').addClass('is-visible')
+}
+
+function incorrectAnswer(choice) {
+  questionTotal++;
+  updateUserScore(questionCorrect, questionTotal);
+  choice.addClass('highlight-wrong');
+  choice.parents('.js-question').addClass('js-question-answered');
+  $('.js-wrong').addClass('is-visible').children().text(choice.parents('.js-question').find('.ak').clone().children().remove().end().text());
+}
+
+function showNextButton() {
+  $('.js-next').removeClass('is-disabled'); console.log('hey');
+}
+
+function hideNextButton() {
+  $('.js-next').addClass('is-disabled');
+}
+
+function updateUserScore(correct, total) {
+  $('.js-q-correct').text(correct);
+  $('.js-q-total').text(total);
+  $('.js-q-ba').text((correct/total).toFixed(3));  
+}
+
+function showResults() {
+  $('#results').removeClass('is-hidden').delay(100).queue(function(){
+    $(this).addClass('is-opaque');
+  });
+
+  document.location = '#results';
+}
+
+$('.js-question-nav').click(function() {
+  var that = $(this);
+
+  if (that.hasClass('js-next') && !(that.hasClass('is-disabled'))) {
+    if (questionNumber < questionCount) { 
+      $('.js-question-nav').removeClass('is-disabled');
+      questionNumber++;
+      displayQuestion(questionNumber); 
+      $('.js-quick-answer-display').children().removeClass('is-visible');
+    }
+  }
+
+  else if (that.hasClass('js-prev') && !(that.hasClass('is-disabled'))) {
+    if (questionNumber > 1) { 
+      $('.js-question-nav').removeClass('is-disabled');
+      questionNumber--;
+      displayQuestion(questionNumber); 
+      if (questionNumber === 1) { that.addClass('is-disabled'); }
+    } 
+  } 
+});
+
+$('#questions').on('click', '.js-letter', function() { 
+  if (($(this).parents('.js-question').hasClass('js-question-answered')) === false) {
+    if ($(this).hasClass('ak')) { correctAnswer($(this)); }
+    else { incorrectAnswer($(this)); }
+    if (questionNumber <= questionCount - 1) { showNextButton(); }
+    else { showResults(); }
+  } 
+});

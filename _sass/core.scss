@@ -12,7 +12,7 @@ html { box-sizing: border-box; }
 
 html, body { color: white; }
 
-html, body, .ar { font-family: 'Roboto', sans-serif; /* Available in 400 or 500 font-weight only */ }
+html, body { font-family: $primary-font; /* Available in 400 or 500 font-weight only */ }
 
 a {
   color: white;
@@ -159,22 +159,29 @@ sup {
 .ar {
   @include standard-transition();
   cursor: pointer;
-  background-color: #313131;
-  border: none;
+  background-color: #333;
+  border: 1px solid #666;
   border-radius: 2px;
-  color: #fff;
+  //box-shadow: inset 0 -8px 0 0px rgba(0,0,0,0.15), inset 66px 0px 0 0px #444;
+  color: #ddd;
   display: inline-block;
-  font-size: 16px;
+  font-family: $primary-font;
+  font-size: 18px;
   font-weight: 500;
   padding: $gr1 $gr2;      
   width: 100%;
-  &:hover { background-color: $brown; color: white; }
+  &:hover { background-color: #666; color: white; }
+  &:active { background-color: #222; }
   span { float: left; }
 }
 
+#questions {
+  @include standard-transition();
+}
 
+.is-hiding { opacity: 0; }
 
-.question li {
+.button-display li {
   float: left;
   margin: 0 auto; 
   padding: $gr1;
@@ -191,5 +198,124 @@ sup {
   font-size: 57px;
   font-weight: 500;
   line-height: 1.2;
-  margin: $gr3 auto $gr2;
+  margin: $gr2 0 $gr3;
 }
+
+.question {
+  display: none;
+}
+
+.is-visible {
+  display: block;
+}
+
+.is-opaque {
+  opacity: 1;
+}
+
+.is-hidden {
+  display: none;
+}
+
+.question-divider {
+  background-color: #444;
+  height: 3px;
+  margin: $gr3 0 $gr2;
+  width: 100%;
+}
+
+.question-nav {
+  @include standard-transition();
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  font-family: $primary-font;
+  letter-spacing: $ls-strd;
+  line-height: 1;
+  padding: 0;
+  position: relative;
+  text-transform: uppercase;
+  &:hover:before { background-color: $light-green; }
+  &:before {
+    @include standard-transition();
+    background-color: transparent;
+    content: '';
+    height: 3px;
+    left: 0;
+    margin: 0 auto;
+    position: absolute;
+    right: 0;
+    top: 30px;
+    transition: 0.3s all;
+    width: 100%;
+  }
+  &.is-disabled {
+    cursor: default;
+    opacity: 0.15;
+    &:before { background-color: transparent; }
+  }
+}
+
+.question-number {
+  color: #606060;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.question-score {
+  color: #606060;
+  font-size: 18px;
+  padding-top: 6px;
+}
+
+.highlight-wrong, .highlight-wrong:hover, .highlight-wrong:active {
+  background-color: #d91200;
+  border-color: #d91200;
+  color: white;
+}
+
+.highlight-right, .highlight-right:hover, .highlight-right:active {
+  background-color: $green;
+  border-color: $green;
+  color: white;
+}
+
+
+.right-answer {
+  opacity: 1;
+  @include standard-transition();
+}
+
+.answer-result {
+  @include standard-transition();
+  font-size: 20px;
+  opacity: 0;
+  position: absolute;
+  top: 20px;
+  &.is-visible { top: 0; opacity: 1; }
+}
+
+.quick-answer-display {
+  margin-top: $gr3;
+  min-height: 20px;
+  position: relative;
+}
+
+/**
+ * Block: .results
+ *   The results section of trivia.
+**/
+
+.results {
+  @include standard-transition();
+  opacity: 0;
+  &.is-opaque { opacity: 1; }
+}
+
+  .results-score {
+    font-size: 72px;
+    font-weight: 500;
+    text-align: center;
+  }
