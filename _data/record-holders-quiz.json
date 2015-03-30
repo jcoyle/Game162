@@ -4,6 +4,7 @@
             "id": 1,
             "question": "Who holds the career record for home runs?",
             "secondary": "",
+            "hint": "This player broke the record in 2007 with the San Francisco Giants.",
             "choices": [
                 "Barry Bonds",
                 "Hank Aaron",
@@ -16,6 +17,7 @@
             "id": 2,
             "question": "Who is the all time hits leader for the New York Yankees?",
             "secondary": "",
+            "hint": "This player wore the number 2 during his career.",
             "choices": [
                 "Derek Jeter",
                 "Lou Gehrig",
@@ -40,6 +42,7 @@
             "id": 4,
             "question": "Who has played the most Major League games?",
             "secondary": "",
+            "hint": "This player played most of his games with the Cincinnati Reds.",
             "choices": [
                 "Pete Rose",
                 "Carl Yastrzemski",

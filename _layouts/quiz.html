@@ -15,6 +15,14 @@
 								<h5 class='question-score fl-r'>You are <span class='js-q-correct'>0</span> for <span class='js-q-total'>0</span></h4>
 							</div>
 							<h2 class="js-question-name question-name">{{ q.question }}</h2>
+
+							{% if q.hint %}
+								<div class='question-hint'>
+									<button class='js-button-hint question-hint-button'>Click here to reveal a hint.</button>
+									<p class='js-hint question-hint-text'>Hint: {{ q.hint }}</p>
+								</div>
+							{% endif %}
+
 							{% for choice in q.choices %}
 								<li>
 									<button class="js-letter ar">{{ choice }}</button>

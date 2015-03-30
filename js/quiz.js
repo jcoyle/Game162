@@ -162,6 +162,11 @@ $('.js-question-nav').click(function() {
   } 
 });
 
+$('#questions').on('click', '.js-button-hint', function() { 
+  $(this).addClass('is-invisible');
+  $(this).siblings('.js-hint').addClass('is-visible');
+});
+
 $('#questions').on('click', '.js-letter', function() { 
   if (($(this).parents('.js-question').hasClass('js-question-answered')) === false) {
     if ($(this).hasClass('ak')) { correctAnswer($(this)); }
@@ -170,3 +175,4 @@ $('#questions').on('click', '.js-letter', function() {
     else { showResults(); }
   } 
 });
+

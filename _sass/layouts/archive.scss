@@ -26,6 +26,12 @@
   .archive-heading:hover + 
   .archive-heading .archive-post { border-top-color: $light-green; } /* 4 */
 
+  .archive-description {
+    display: block;
+    font-size: 18px;
+    margin-top: $gr1 / 4;
+  }
+
   .archive-id {
     @include standard-transition();
     bottom: 0;
