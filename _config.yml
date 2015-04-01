@@ -10,8 +10,10 @@ defaults:
     values:
       layout: "fact-single"
 
-future:    true
+future:    false
 permalink: /:title/
 
 paginate: 10
 paginate_path: "/archive/page/:num"
+
+my_setting: "hihi"

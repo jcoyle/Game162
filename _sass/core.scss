@@ -187,7 +187,7 @@ sup {
   padding: $gr1;
   text-align: center;
   width: 50%;
-  &:last-child { width: 100%; 
+  &:nth-of-type(5) { width: 100%; 
     .ar { 
       width: 50%; 
     } 

@@ -1,0 +1,171 @@
+{
+    "question": [
+        {
+            "id": 1,
+            "question": "Who are the 2014 World Series champions?",
+            "secondary": "",
+            "choices": [
+                "San Francisco Giants",
+                "Kansas City Royals",
+                "Detroit Tigers",
+                "New York Yankees",
+                "St. Louis Cardinals"
+            ]
+        },
+        {
+            "id": 2,
+            "question": "Who was the home run king of 2014?",
+            "choices": [
+                "Nelson Cruz",
+                "Giancarlo Stanton",
+                "Chris Davis",
+                "Miguel Cabrera",
+                "Jose Abreu"
+            ]
+        },
+        {
+            "id": 3,
+            "question": "What player won both the Cy Young Award and Most Valuable Player award?",
+            "choices": [
+                "Clayton Kershaw",
+                "Max Scherzer",
+                "Mike Trout",
+                "Felix Hernandez",
+                "Corey Kluber"
+            ]
+        },
+        {
+            "id": 4,
+            "question": "Who was the American League Rookie of the Year award winner?",
+            "choices": [
+                "Jose Abreu",
+                "Masahiro Tanaka",
+                "Matt Shoemaker",
+                "Jacob deGrom",
+                "Corey Kluber"
+            ]
+        },
+        {
+            "id": 5,
+            "question": "Who was the National League Rookie of the Year award winner?",
+            "choices": [
+                "Jacob deGrom",
+                "Jose Abreu",
+                "Billy Hamilton",
+                "Bryce Harper",
+                "Corey Kluber"
+            ]
+        },
+        {
+            "id": 6,
+            "question": "What team did the Kansas City Royals beat in the Wild Card game?",
+            "choices": [
+                "Oakland Athletics",
+                "Detroit Tigers",
+                "Baltimore Orioles",
+                "San Fransisco Giants",
+                "Los Angeles Angels"
+            ]
+        },
+        {
+            "id": 7,
+            "question": "What team finished with the best record at 98-64?",
+            "choices": [
+                "Los Angeles Angels",
+                "Washington Nationals",
+                "Baltimore Orioles",
+                "San Fransisco Giants",
+                "Kansas City Royals"
+            ]
+        },
+        {
+            "id": 8,
+            "question": "What team finished with the worst record at 64-98?",
+            "choices": [
+                "Arizona Diamondbacks",
+                "Colarado Rockies",
+                "Texas Rangers",
+                "Houston Astros",
+                "Minnesota Twins"
+            ]
+        },
+        {
+            "id": 9,
+            "question": "What team finished with the worst record at 64-98?",
+            "choices": [
+                "Arizona Diamondbacks",
+                "Colarado Rockies",
+                "Texas Rangers",
+                "Houston Astros",
+                "Minnesota Twins"
+            ]
+        },
+        {
+            "id": 10,
+            "question": "What pitcher lead baseball in strikeouts with 271?",
+            "choices": [
+                "David Price",
+                "Corey Kluber",
+                "Max Scherzer",
+                "Felix Hernandez",
+                "Clayton Kershaw"
+            ]
+        },
+        {
+            "id": 11,
+            "question": "What batter lead baseball in slugging % with 0.581?",
+            "choices": [
+                "Jose Abreu",
+                "Victor Martinez",
+                "Mike Trout",
+                "Giancarlo Stanton",
+                "Edwin Encarnacion"
+            ]
+        },
+        {
+            "id": 12,
+            "question": "What pitching staff lead baseball in strikeouts per 9 innings?",
+            "hint": "This team also had one of its pitchers win the Cy Young Award.",
+            "choices": [
+                "Cleveland Indians",
+                "Tampa Bay Rays",
+                "New York Yankees",
+                "Los Angeles Dodgers",
+                "Seattle Mariners"
+            ]
+        },
+        {
+            "id": 13,
+            "question": "What batter had the most intentional walks with 28?",
+            "choices": [
+                "Victor Martinez",
+                "Giancarlo Stanton",
+                "David Ortiz",
+                "Robinson Cano",
+                "Jose Abreu"
+            ]
+        },
+        {
+            "id": 14,
+            "question": "How many no-hitters were in the 2014 season?",
+            "choices": [
+                "5",
+                "0",
+                "1",
+                "4",
+                "7"
+            ]
+        },
+        {
+            "id": 15,
+            "question": "What World Series pitcher had a 0.43 ERA over 21 innings pitched, and won the WS MVP?",
+            "choices": [
+                "Madison Bumgarner",
+                "Tim Lincecum",
+                "James Shields",
+                "Clayton Kershaw",
+                "Jake Peavy"
+            ]
+        },
+    ]
+}

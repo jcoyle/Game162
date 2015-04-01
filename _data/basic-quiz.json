@@ -1,0 +1,168 @@
+{
+    "question": [
+        {
+            "id": 1,
+            "question": "Who holds the career record for home runs?",
+            "secondary": "",
+            "hint": "This player broke the record in 2007 with the San Francisco Giants.",
+            "choices": [
+                "Barry Bonds",
+                "Hank Aaron",
+                "Babe Ruth",
+                "Mark Mcgwire"
+            ]
+        },
+        {
+            "id": 2,
+            "question": "What batter played in 2,632 consecutive games?",
+            "secondary": "",
+            "hint": "This player's streak started in 1982 and ended in 1998, playing with the Baltimore Orioles.",
+            "choices": [
+                "Cal Ripken Jr.",
+                "Lou Gehrig",
+                "Miguel Tejada",
+                "Pete Rose"
+            ]
+        },
+        {
+            "id": 3,
+            "question": "What batter has 4,256 career hits, the most all time?",
+            "secondary": "",
+            "hint": "This player is also infamous for being banned from baseball due to gambling when he was a manager.",
+            "choices": [
+                "Pete Rose",
+                "Ty Cobb",
+                "Derek Jeter",
+                "Hank Aaron"
+            ]
+        },
+        {
+            "id": 4,
+            "question": "Amyotrophic lateral sclerosis (ALS) is commonly known by the name of a famous baseball player that died from it in 1941. Who was that player?",
+            "hint": "This player was a career New York Yankees batter, playing from 1923 to 1939.",
+            "choices": [
+                "Lou Gehrig",
+                "Babe Ruth",
+                "Mickey Mantle",
+                "Joe DiMaggio"
+            ]
+        },
+        {
+            "id": 5,
+            "question": "How many teams are located in California?",
+            "choices": [
+                "5",
+                "1",
+                "4",
+                "3"
+            ]
+        },
+        {
+            "id": 6,
+            "question": "What baseball franchise has the most World Series championships at 27?",
+            "choices": [
+                "New York Yankees",
+                "St. Louis Cardinals",
+                "Los Angeles Dodgers",
+                "San Fransisco Giants"
+            ]
+        },
+        {
+            "id": 7,
+            "question": "When Babe Ruth was traded to the New York Yankees, the 'curse of the bambino' became a superstition for team that traded him. What team made the trade?",
+            "hint": "The curse originates from the fact this team had a world series drought from 1918 to 2004.",
+            "choices": [
+                "Boston Red Sox",
+                "Detroit Tigers",
+                "Los Angeles Dodgers",
+                "Baltimore Orioles"
+            ]
+        },
+        {
+            "id": 8,
+            "question": "What team has not won a World Series since 1908, the longest drought in baseball history?",
+            "hint": "This team's stadium is known for its ivy-covered outfield wall.",
+            "choices": [
+                "Chicago Cubs",
+                "Chicago White Sox",
+                "Cleveland Indians",
+                "Pittsburgh Pirates"
+            ]
+        },
+        {
+            "id": 9,
+            "question": "What team won the 2014 World Series?",
+            "hint": "This National League team has had recent World Series success in 2010 and 2012.",
+            "choices": [
+                "San Fransisco Giants",
+                "Kansasy City Royals",
+                "St. Louis Cardinals",
+                "Los Angeles Dodgers"
+            ]
+        },
+        {
+            "id": 10,
+            "question": "What player is known for breaking the color barrier in 1947 with the Brooklyn Dodgers?",
+            "hint": "This Hall of Fame player also had his number (#42) retired across baseball.",
+            "choices": [
+                "Jackie Robinson",
+                "Roberto Clemente",
+                "Minnie Minoso",
+                "Larry Doby"
+            ]
+        },
+        {
+            "id": 11,
+            "question": "The award given to the best pitcher in the league each season is named after which pitcher?",
+            "hint": "This Hall of Fame pitcher has the most career wins and losses of any pitcher.",
+            "choices": [
+                "Cy Young",
+                "Babe Ruth",
+                "Sandy Koufax",
+                "Walter Johnson"
+            ]
+        },
+        {
+            "id": 12,
+            "question": "How many defensive positions are on the field during a game?",
+            "hint": "The pitcher counts as a defensive position.",
+            "choices": [
+                "9",
+                "2",
+                "10",
+                "7"
+            ]
+        },
+        {
+            "id": 13,
+            "question": "What is the maximum number of runs that can be scored in a single at bat?",
+            "hint": "This can be achieved by hitting a grand slam.",
+            "choices": [
+                "4",
+                "1",
+                "2",
+                "5"
+            ]
+        },
+        {
+            "id": 14,
+            "question": "What league has the Designated Hitter (DH) rule?",
+            "hint": "This can be achieved by hitting a grand slam.",
+            "choices": [
+                "American League",
+                "National League"
+            ]
+        },
+        {
+            "id": 15,
+            "question": "What is the distance from home plate to first base?",
+            "hint": "This distance is often mentioned in commentary when a runner is on third base.",
+            "choices": [
+                "90 Feet",
+                "127 Feet, 3 3/8th Inches",
+                "60 Feet, 6 Inches",
+                "100 Yards"
+            ]
+        }
+    ]
+}

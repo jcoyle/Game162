@@ -51,5 +51,188 @@
                 "Cal Ripken"
             ]
         },
+        {
+            "id": 5,
+            "question": "What player has the most career home runs when playing shortstop?",
+            "hint": "If the player plays a game in another position, the home run doesn't count.",
+            "choices": [
+                "Cal Ripken",
+                "Alex Rodriguez",
+                "Miguel Tejada",
+                "Derek Jeter",
+                "Ozzie Smith"
+            ]
+        },
+        {
+            "id": 6,
+            "question": "What right handed batter has the most career hits?",
+            "hint": "This player had 3,771 career hits, the third most of all time.",
+            "choices": [
+                "Hank Aaron",
+                "Pete Rose",
+                "Ty Cobb",
+                "Derek Jeter",
+                "Honus Wagner"
+            ]
+        },
+        {
+            "id": 7,
+            "question": "What player finished his career with exactly 3,000 hits?",
+            "hint": "This batter died at the age of 38.",
+            "choices": [
+                "Roberto Clemente",
+                "Al Kaline",
+                "Derek Jeter",
+                "Lou Gehrig",
+                "Lou Brock"
+            ]
+        },
+        {
+            "id": 8,
+            "question": "What player is the career leader in slugging % (min 3000 PA)?",
+            "choices": [
+                "Babe Ruth",
+                "Ted Williams",
+                "Lou Gehrig",
+                "Barry Bonds",
+                "Mark McGwire"
+            ]
+        },
+        {
+            "id": 9,
+            "question": "Who is the career leader in triples with 309?",
+            "hint": "This player spent much of his career with the Detroit Tigers.",
+            "choices": [
+                "Sam Crawford",
+                "Ty Cobb",
+                "Honus Wagner",
+                "Stan Musial",
+                "Tris Speaker"
+            ]
+        },
+        {
+            "id": 10,
+            "question": "What pitcher had thrown the most career strikeouts?",
+            "hint": "This pitcher has also recorded the most walks.",
+            "choices": [
+                "Nolan Ryan",
+                "Cy Young",
+                "Randy Johnson",
+                "Roger Clemens",
+                "Tom Seaver"
+            ]
+        },
+        {
+            "id": 11,
+            "question": "What pitcher has the most wins?",
+            "hint": "This pitcher recorded 511 wins, the most by 94 wins.",
+            "choices": [
+                "Cy Young",
+                "Walter Johnson",
+                "Greg Maddux",
+                "Roger Clemens",
+                "Nolan Ryan"
+            ]
+        },
+        {
+            "id": 12,
+            "question": "What batter holds the single season record for hits?",
+            "choices": [
+                "Ichiro Suzuki",
+                "Pete Rose",
+                "Ty Cobb",
+                "Derek Jeter",
+                "George Sisler"
+            ]
+        },
+        {
+            "id": 13,
+            "question": "Who has the longest hitting streak at 56 games?",
+            "choices": [
+                "Joe DiMaggio",
+                "Ichiro Suzuki",
+                "Mickey Mantle",
+                "Ted Williams",
+                "George Sisler"
+            ]
+        },
+        {
+            "id": 14,
+            "question": "Who has the most career stolen bases at 1,406?",
+            "choices": [
+                "Rickey Henderson",
+                "Ichiro Suzuki",
+                "Tim Raines",
+                "Lou Brock",
+                "Billy Hamilton"
+            ]
+        },
+        {
+            "id": 15,
+            "question": "Who has the single season home run record with 73?",
+            "choices": [
+                "Barry Bonds",
+                "Sammy Sosa",
+                "Mark McGwire",
+                "Babe Ruth",
+                "Roger Maris"
+            ]
+        },
+        {
+            "id": 16,
+            "question": "Who is the only player to hit 60+ home runs in a single season three times?",
+            "choices": [
+                "Sammy Sosa",
+                "Barry Bonds",
+                "Mark McGwire",
+                "Babe Ruth",
+                "Roger Maris"
+            ]
+        },
+        {
+            "id": 17,
+            "question": "Who is the career leader in saves?",
+            "choices": [
+                "Mariano Rivera",
+                "Trevor Hoffman",
+                "Lee Smith",
+                "Rollie Fingers",
+                "Nolan Ryan"
+            ]
+        },
+        {
+            "id": 18,
+            "question": "Who has the most career shutouts?",
+            "hint": "This pitcher played his entire career on one team.",
+            "choices": [
+                "Walter Johnson",
+                "Cy Young",
+                "Christy Mathewson",
+                "Tom Seaver",
+                "Nolan Ryan"
+            ]
+        },
+        {
+            "id": 19,
+            "question": "What pitcher has the best career strikeouts per 9 innings? Min. 1000 IP.",
+            "choices": [
+                "Randy Johnson",
+                "Kerry Wood",
+                "Pedro Martinez",
+                "Clayton Kershaw",
+                "Nolan Ryan"
+            ]
+        },
+        {
+            "id": 20,
+            "question": "What pitcher threw 20 strikeouts in a 9 inning game at the age of 20?",
+            "choices": [
+                "Kerry Wood",
+                "Roger Clemens",
+                "Randy Johnson",
+                "Stephen Strasburg",
+                "Nolan Ryan"
+            ]
+        }
     ]
 }

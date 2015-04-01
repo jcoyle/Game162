@@ -1,4 +1,5 @@
-{% assign quiz = site.data.record-holders-quiz %}
+{% assign whichQuiz = page.tags %}
+{% assign quiz = site.data[whichQuiz] %}
 
 
 {% include head.html %}
@@ -11,7 +12,7 @@
 					{% for q in quiz.question %}
 						<ul class="clearfix button-display question js-question">
 							<div class="fact fact-header clearfix">
-								<h4 class='question-number fl-l'>Question <span class='js-question-number'>{{ forloop.index }}</span> of {{ forloop.length }}</h4>
+								<h4 class='question-number fl-l'>{{ page.subtitle }} — Question <span class='js-question-number'>{{ forloop.index }}</span> of {{ forloop.length }}</h4>
 								<h5 class='question-score fl-r'>You are <span class='js-q-correct'>0</span> for <span class='js-q-total'>0</span></h4>
 							</div>
 							<h2 class="js-question-name question-name">{{ q.question }}</h2>
