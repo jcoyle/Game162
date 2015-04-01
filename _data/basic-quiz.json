@@ -69,8 +69,8 @@
         },
         {
             "id": 7,
-            "question": "When Babe Ruth was traded to the New York Yankees, the 'curse of the bambino' became a superstition for team that traded him. What team made the trade?",
-            "hint": "The curse originates from the fact this team had a world series drought from 1918 to 2004.",
+            "question": "When Babe Ruth was traded to the New York Yankees, the 'curse of the bambino' became a superstition for the team that traded him. What team made the trade?",
+            "hint": "The curse is thought to have been lifted in 2004 when this team won its first World Series since that trade.",
             "choices": [
                 "Boston Red Sox",
                 "Detroit Tigers",
@@ -147,7 +147,6 @@
         {
             "id": 14,
             "question": "What league has the Designated Hitter (DH) rule?",
-            "hint": "This can be achieved by hitting a grand slam.",
             "choices": [
                 "American League",
                 "National League"

@@ -227,14 +227,14 @@
   background-size: 500px 400px;
 }
 
-  .i-rss {
-    background-position: -293px -100px;
+  .i-follow {
+    background-position: -200px -0px;
     height: 39px;
     position: absolute;
     width: 39px;
     right: $gr2;
     top: $gr2;
-    &:hover { background-position: -293px -150px; }
+    &:hover { background-position: -200px -50px; }
     @media #{$mq-footer} { 
       margin-left: 5px;
       margin-top: 10px;
