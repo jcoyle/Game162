@@ -158,12 +158,11 @@ sup {
 
 .ar {
   @include standard-transition();
-  cursor: pointer;
   background-color: #333;
   border: 1px solid #666;
   border-radius: 2px;
-  //box-shadow: inset 0 -8px 0 0px rgba(0,0,0,0.15), inset 66px 0px 0 0px #444;
   color: #ddd;
+  cursor: pointer;
   display: inline-block;
   font-family: $primary-font;
   font-size: 18px;
@@ -186,19 +185,25 @@ sup {
   margin: 0 auto; 
   padding: $gr1;
   text-align: center;
-  width: 50%;
-  &:nth-of-type(5) { width: 100%; 
-    .ar { 
-      width: 50%; 
-    } 
+  width: 100%;
+
+  @media #{$lg-screen} {
+    width: 50%;
+    &:nth-of-type(5) { width: 100%; 
+      .ar { width: 50%; } 
+    }
   }
 }
 
 .question-name {
-  font-size: 57px;
+  font-size: 48px;
   font-weight: 500;
-  line-height: 1.2;
+  line-height: $lh-sm;
   margin: $gr2 0 $gr3;
+  @media (min-width: 800px) { 
+    font-size: 57px;
+    line-height: $lh-strd;
+  }
 }
 
 .question {

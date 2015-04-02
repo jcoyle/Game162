@@ -13,7 +13,7 @@
 						<ul class="clearfix button-display question js-question">
 							<div class="fact fact-header clearfix">
 								<h4 class='question-number fl-l'>{{ page.subtitle }} — Question <span class='js-question-number'>{{ forloop.index }}</span> of {{ forloop.length }}</h4>
-								<h5 class='question-score fl-r'>You are <span class='js-q-correct'>0</span> for <span class='js-q-total'>0</span></h4>
+								<h5 class='hide-md question-score fl-r'>You are <span class='js-q-correct'>0</span> for <span class='js-q-total'>0</span></h5>
 							</div>
 							<h2 class="js-question-name question-name">{{ q.question }}</h2>
 
@@ -41,11 +41,11 @@
 				<div class="question-divider"></div>
 				<button class="question-nav animated fadeInUp fl-l js-question-nav js-prev is-disabled">
 					<span class="i i-prev fl-l"></span>
-					Previous Question
+					Previous <span class="hide-sm">Question</span>
 				</button>
 				<button class="question-nav animated fadeInUp fl-r js-question-nav js-next is-disabled">
 					<span class="i i-next fl-r"></span>
-					Next Question
+					Next <span class="hide-sm">Question</span>
 				</button>
 			</div>
 
