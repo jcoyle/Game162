@@ -42,7 +42,7 @@ The best way to reach me is by email. There are two basic email categories: fact
 
 ## Colophon
 
-Game162 is powered by [Jekyll](http://jekyllrb.com/) and hosted on [Github Pages](https://pages.github.com/). This site is hosted on a public repository on Github, found [here](https://github.com/jcoyle/Game162). The front-end of the site utilizes [SCSS](http://sass-lang.com/), [Markdown](http://daringfireball.net/projects/markdown/), and basic HTML5 in addition to what is utilized in Jekyll. The web font used is [Roboto](http://www.google.com/fonts/specimen/Roboto) and is delivered through [Google Fonts](http://www.google.com/fonts).
+Game162 is powered by [Jekyll](http://jekyllrb.com/) and hosted on [Github Pages](https://pages.github.com/). This site is hosted on a public repository on Github, found [here](https://github.com/jpex/Game162). The front-end of the site utilizes [SCSS](http://sass-lang.com/), [Markdown](http://daringfireball.net/projects/markdown/), and basic HTML5 in addition to what is utilized in Jekyll. The web font used is [Roboto](http://www.google.com/fonts/specimen/Roboto) and is delivered through [Google Fonts](http://www.google.com/fonts).
 
 Facts are created ahead of time (sometimes a day, sometimes a year in advance) and assigned a date and permalink based on the desired timing of the post. Jekyll does not publish the post until the date specified has been reached.
 
