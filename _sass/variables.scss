@@ -57,7 +57,7 @@ $lh-lg: 1.8181;
 }
 
 @mixin standard-transition() {
-  transition: 0.4s all;
+  transition: 0.3s all;
   @include cubic-timing();
 }
 
