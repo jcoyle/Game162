@@ -6,7 +6,7 @@
 .clearfix:after {
     content: "";
     display: table;
-} 
+}
 
 .clearfix:after {
     clear: both;
@@ -34,7 +34,7 @@
   float: none;
 }
 
-/* 
+/*
   ^font-weight
   ^.fw
 */
@@ -52,7 +52,7 @@
   display: inline-block;
 }
 
-/* 
+/*
   ^font-size
   ^.fz
 */
@@ -128,7 +128,7 @@
   letter-spacing: 0.04em;
 }
 
-/* 
+/*
   ^padding
   ^.pd
 */
@@ -224,7 +224,7 @@
 **/
 
 .i {
-  background-image: url('/img/sprite.png');
+  background-image: url($baseurl + '/img/sprite.png');
   background-repeat: no-repeat;
   background-size: 500px 400px;
 }
@@ -237,10 +237,10 @@
     right: $gr2;
     top: $gr2;
     &:hover { background-position: -200px -50px; }
-    @media #{$mq-footer} { 
+    @media #{$mq-footer} {
       margin-left: 5px;
       margin-top: 10px;
-      position: static; 
+      position: static;
     }
   }
 
@@ -281,7 +281,7 @@
 }
 
 /**
- * Hide Elements via media queries 
+ * Hide Elements via media queries
 **/
 
 @media #{$sm-screen} {

@@ -1,22 +1,22 @@
-{% if page.secondary %} 
+{% if page.secondary %}
 	{% assign i = page %}
 {% else %}
 	{% assign i = site.posts.first %}
 {% endif %}
 
-{% if i.primary %} 
+{% if i.primary %}
 	{% assign primary = i.primary %}
 {% else %}
 	{% assign primary = i.title %}
 {% endif %}
-	
+
 {% capture factId %}
 	{{ i.id | remove:'/' | prepend:'#' }}
 {% endcapture %}
 
 {% include head.html %}
 	<body class="field">
-		{% include header.html %}	
+		{% include header.html %}
 		<section class="main">
 			<div class="wrapper main-wrapper">
 				<div class="fact fact-header clearfix">
@@ -30,14 +30,14 @@
 			</div>
 			<div class="fact main-nav">
 				<div class="wrapper clearfix">
-					{% if i.previous %} 
-						<a href="{{ i.previous.url }}" class="main-nav-btn fl-l animated fadeInUp">
+					{% if i.previous %}
+						<a href="{{ site.baseurl }}{{ i.previous.url }}" class="main-nav-btn fl-l animated fadeInUp">
 							<span class="i i-prev fl-l"></span>
 							Previous <span class="hide-sm">Fact</span>
 						</a>
 					{% endif %}
-					{% if i.next %} 
-						<a href="{{ i.next.url }}" class="main-nav-btn fl-r animated fadeInUp">
+					{% if i.next %}
+						<a href="{{ site.baseurl }}{{ i.next.url }}" class="main-nav-btn fl-r animated fadeInUp">
 							<span class="i i-next fl-r"></span>
 							Next <span class="hide-sm">Fact</span>
 						</a>
