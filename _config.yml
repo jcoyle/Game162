@@ -1,7 +1,7 @@
 # Site settings
 title:       Game162
 description: "Hey batter batter, hey batter batter, swing!"
-baseurl:     "/game162"
+baseurl:     "/Game162"
 gems:
   - jekyll-sitemap
 
